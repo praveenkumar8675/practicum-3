@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Hotel Registration</title>
+    <style>
+        .form-box {
+            width: 450px;
+            margin: 30px auto;
+            border: 1px solid red;
+            padding: 15px;
+        }
+        label {
+            display: inline-block;
+            width: 130px;
+            margin-bottom: 12px;
+        }
+        input, select {
+            width: 180px;
+            height: 22px;
+        }
+        h1 {
+            color: red;
+        }
+        .page {
+            display: none;
+        }
+        #p1 {
+            display: block;
+        }
+        #p2:target,
+        #p3:target,
+        #p4:target {
+            display: block;
+        }
+    </style>
+</head>
+<body>
+<div class="form-box" id="p1">
+    <h1>Account Registration</h1>
+    <form>
+        <label>Username:</label>
+        <input type="text" required><br>
+        <label>Password:</label>
+        <input type="password" required><br>
+        <label>Confirm Password:</label>
+        <input type="password" required><br><br>
+        <a href="#p2">Next</a>
+    </form>
+</div>
+<div class="form-box page" id="p2">
+    <h1>Reservation Registration</h1>
+    <form>
+        <label>Name:</label>
+        <input type="text" required><br>
+        <label>Email:</label>
+        <input type="email" required><br>
+        <label>Check-in:</label>
+        <input type="date" required><br>
+        <label>Check-out:</label>
+        <input type="date" required><br><br>
+        <a href="#p3">Next</a>
+    </form>
+</div>
+<div class="form-box page" id="p3">
+    <h1>Guest Registration</h1>
+    <form>
+        <label>Room Type:</label>
+        <select required>
+            <option value="">Select</option>
+            <option>Single</option>
+            <option>Double</option>
+            <option>Deluxe</option>
+        </select>
+        <br>
+        <label>Guests:</label>
+        <input type="number" required><br>
+        <label>Phone:</label>
+        <input type="tel" required><br><br>
+        <a href="#p4">Submit</a>
+    </form>
+</div>
+<div class="form-box page" id="p4">
+    <h1>Congratulations!</h1>
+    <p>Your hotel registration is completed successfully.</p>
+    <p>Thank you for choosing our service.</p>
+</div>
+</body>
+</html>
