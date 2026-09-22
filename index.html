@@ -1,88 +1,146 @@
 <!DOCTYPE html>
+
 <html>
 <head>
-    <title>Hotel Registration</title>
+    <title>Workshop Registration</title>
     <style>
-        .form-box {
-            width: 450px;
-            margin: 30px auto;
-            border: 1px solid red;
-            padding: 15px;
+        body {
+            background-color: #f0f8ff;
+            font-family: Arial;
         }
-        label {
-            display: inline-block;
-            width: 130px;
-            margin-bottom: 12px;
-        }
-        input, select {
-            width: 180px;
-            height: 22px;
-        }
-        h1 {
-            color: red;
-        }
-        .page {
-            display: none;
-        }
-        #p1 {
-            display: block;
-        }
-        #p2:target,
-        #p3:target,
-        #p4:target {
-            display: block;
-        }
-    </style>
+
+```
+    .form-box {
+        width: 400px;
+        margin: 40px auto;
+        border: 2px solid blue;
+        padding: 20px;
+        background-color: white;
+    }
+
+    label {
+        display: inline-block;
+        width: 120px;
+        margin-bottom: 15px;
+    }
+
+    input, select {
+        width: 170px;
+        height: 24px;
+    }
+
+    h2 {
+        color: blue;
+        text-align: center;
+    }
+
+    .page {
+        display: none;
+    }
+
+    #p1 {
+        display: block;
+    }
+
+    #p2:target,
+    #p3:target,
+    #p4:target {
+        display: block;
+    }
+
+    a {
+        display: inline-block;
+        margin-top: 10px;
+        padding: 6px 15px;
+        background-color: blue;
+        color: white;
+        text-decoration: none;
+    }
+</style>
+```
+
 </head>
+
 <body>
+
 <div class="form-box" id="p1">
-    <h1>Account Registration</h1>
-    <form>
-        <label>Username:</label>
-        <input type="text" required><br>
-        <label>Password:</label>
-        <input type="password" required><br>
-        <label>Confirm Password:</label>
-        <input type="password" required><br><br>
-        <a href="#p2">Next</a>
-    </form>
+    <h2>Participant Details</h2>
+
+```
+<form>
+    <label>Full Name:</label>
+    <input type="text" required><br>
+
+    <label>Age:</label>
+    <input type="number" required><br>
+
+    <label>College:</label>
+    <input type="text" required><br><br>
+
+    <a href="#p2">Next</a>
+</form>
+```
+
 </div>
+
 <div class="form-box page" id="p2">
-    <h1>Reservation Registration</h1>
-    <form>
-        <label>Name:</label>
-        <input type="text" required><br>
-        <label>Email:</label>
-        <input type="email" required><br>
-        <label>Check-in:</label>
-        <input type="date" required><br>
-        <label>Check-out:</label>
-        <input type="date" required><br><br>
-        <a href="#p3">Next</a>
-    </form>
+    <h2>Workshop Details</h2>
+
+```
+<form>
+    <label>Workshop:</label>
+    <select required>
+        <option value="">Select</option>
+        <option>Web Development</option>
+        <option>Python</option>
+        <option>Data Science</option>
+    </select><br>
+
+    <label>Date:</label>
+    <input type="date" required><br>
+
+    <label>Email:</label>
+    <input type="email" required><br><br>
+
+    <a href="#p3">Next</a>
+</form>
+```
+
 </div>
+
 <div class="form-box page" id="p3">
-    <h1>Guest Registration</h1>
-    <form>
-        <label>Room Type:</label>
-        <select required>
-            <option value="">Select</option>
-            <option>Single</option>
-            <option>Double</option>
-            <option>Deluxe</option>
-        </select>
-        <br>
-        <label>Guests:</label>
-        <input type="number" required><br>
-        <label>Phone:</label>
-        <input type="tel" required><br><br>
-        <a href="#p4">Submit</a>
-    </form>
+    <h2>Contact Details</h2>
+
+```
+<form>
+    <label>Phone:</label>
+    <input type="tel" required><br>
+
+    <label>City:</label>
+    <input type="text" required><br>
+
+    <label>Mode:</label>
+    <select required>
+        <option value="">Select</option>
+        <option>Online</option>
+        <option>Offline</option>
+    </select><br><br>
+
+    <a href="#p4">Register</a>
+</form>
+```
+
 </div>
+
 <div class="form-box page" id="p4">
-    <h1>Congratulations!</h1>
-    <p>Your hotel registration is completed successfully.</p>
-    <p>Thank you for choosing our service.</p>
+    <h2>Registration Successful</h2>
+
+```
+<p>Your workshop registration has been completed successfully.</p>
+<p>Thank you for registering!</p>
+```
+
 </div>
+
 </body>
 </html>
